@@ -4,19 +4,19 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 *First, install this packages :
 
-*```bash
+```bash
 npm install sass
 npm install bootstrap
 npm install reactstrap
-```*
+```
 
 *then, run the development server :
 
-*```bash
+```bash
 npm run dev
 # or
 yarn dev
-```*
+```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result .
 
