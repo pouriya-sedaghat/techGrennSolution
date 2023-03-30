@@ -4,13 +4,15 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ### packages:
 
+First, install this packages:
+
 ```bash
 npm install sass
 npm install bootstrap
 npm install reactstrap
 ```
 
-First, run the development server:
+then, run the development server:
 
 ```bash
 npm run dev
