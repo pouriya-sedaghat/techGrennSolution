@@ -1,0 +1,42 @@
+@import 'variables.scss';
+
+.development {
+
+    h2,
+    li {
+        color: $color;
+    }
+
+    h2 {
+        font-size: calc(6px + 1vw);
+        font-weight: 900;
+    }
+
+    p {
+        font-size: calc(-3px + 1vw);
+        font-weight: 400;
+        text-align: justify;
+    }
+
+    ul {
+        li {
+            font-size: calc(3px + 1vw);
+            font-weight: 700;
+
+            &::marker {
+                color: $bg-color;
+            }
+        }
+    }
+
+    &>div:first-child {
+        background-image: url('/pattern-one.png');
+        background-repeat: no-repeat;
+        background-size: 6% 50%;
+        background-position: right;
+
+        &>div:first-child>div {
+            border-radius: 11.8% !important;
+        }
+    }
+}

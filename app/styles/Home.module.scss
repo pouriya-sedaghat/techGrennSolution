@@ -1,0 +1,402 @@
+@import 'variables.scss';
+
+@mixin transition($tp: all, $td: 350ms, $ttf: linear, $tde: 0s) {
+    -webkit-transition: $tp $td $ttf $tde;
+    -moz-transition: $tp $td $ttf $tde;
+    -ms-transition: $tp $td $ttf $tde;
+    -o-transition: $tp $td $ttf $tde;
+    transition: $tp $td $ttf $tde;
+}
+
+@mixin transform($variable: scaleX(0)) {
+    -webkit-transform: $variable;
+    -moz-transform: $variable;
+    -ms-transform: $variable;
+    -o-transform: $variable;
+    transform: $variable;
+}
+
+.home {
+    &>div:first-child {
+
+        img {
+            @include transition();
+
+            &:hover {
+                filter: brightness(75%);
+            }
+        }
+
+        &>div>div,
+        &>div>div>div {
+            z-index: 2;
+
+            &:hover~img {
+                filter: brightness(75%);
+            }
+        }
+
+        &>div:last-child {
+
+            &>div:first-child {
+                width: 34.7%;
+                max-width: fit-content;
+            }
+
+            &>div:last-child {
+                width: 60.5%;
+
+                &>div {
+                    height: 47.65%;
+                }
+
+                &>div>div:first-child {
+                    z-index: 3;
+                }
+
+                &>div>div:last-child {
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    @include transition();
+
+                    &:hover {
+                        filter: brightness(75%);
+                    }
+                }
+
+                &>div>div:first-child:hover~div {
+                    filter: brightness(75%);
+                }
+
+                &>div:first-child>div:last-child {
+                    background-image: url('/software.png');
+                    background-position: center;
+                }
+
+                &>div:last-child>div:last-child {
+                    height: 47.65%;
+                    background-image: url('/digital-marketing.png');
+                    background-position: 50% 21%;
+                }
+            }
+        }
+
+        a {
+            color: $color;
+            background-color: $bg-color;
+            font-weight: 500;
+            font-size: calc(-3px + 1vw);
+            @include transition();
+
+            &:hover {
+                background-color: $bg-color-hover;
+            }
+        }
+
+        h2 {
+            text-shadow: 2px 2px 7px rgba(38, 38, 38, 0.3), -2px -2px 7px rgba(38, 38, 38, 0.3);
+            color: white;
+            font-weight: 900;
+            font-size: calc(12px + 1vw);
+            margin: 0;
+        }
+    }
+
+    &>div:nth-child(2) {
+        background-image: url('/Pattern-one.png');
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-size: 7.5% 64%;
+
+        div:first-child {
+            max-width: fit-content;
+
+            div:first-child {
+                width: 97%;
+            }
+
+            div:last-child {
+                right: -15.5%;
+                top: 50%;
+                margin-top: -12.5%;
+                box-shadow: -10px 10px 15px 10px rgba(38, 38, 38, 0.25);
+                border-radius: 40%;
+
+                img {
+                    filter: drop-shadow(-5px 5px 0px white);
+                }
+            }
+        }
+
+        h2 {
+            color: #834CAB;
+            font-size: calc(13px + 1vw);
+            font-weight: 900;
+        }
+
+        p {
+            font-size: calc(-3px + 1vw);
+            font-weight: 500;
+            text-align: justify;
+        }
+    }
+
+    &>div:nth-child(3) {
+        background-image: url('/Pattern-two.png');
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: 7.5% 75%;
+
+        h2 {
+            color: $color;
+            font-size: calc(13px + 1vw);
+            font-weight: 900;
+        }
+
+        button {
+            font-size: calc(-1px + 1vw);
+            font-weight: 700;
+            color: #5ADA86;
+        }
+
+        &>div:last-child {
+            height: 40vh;
+
+            &>div {
+                &:hover div {
+                    background-color: #834CAB;
+                    border: 4px solid #FFCB05;
+                    @include transition();
+                }
+
+                &:hover button {
+                    background-color: #5ADA86;
+                    color: white;
+                    @include transition();
+                }
+
+                &>div {
+                    background-color: #E3E5E5;
+                    width: calc(85px + 1vw);
+                    height: calc(85px + 1vw);
+                }
+            }
+        }
+    }
+
+    &>div:nth-child(4) {
+        background-color: #E3E5E5;
+        background-image: url('/Pattern-three.png');
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: 80% 120%;
+
+        h2 {
+            color: $color;
+            font-size: calc(13px + 1vw);
+            font-weight: 900;
+        }
+
+        &>div:nth-child(2) {
+            i {
+                z-index: 5;
+                background-color: rgba(58, 59, 58, 0.302);
+                width: 2vw;
+                height: 2vw;
+                top: 50%;
+                margin-top: -15px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: rgba(27, 27, 27, 0.741);
+                }
+
+                @include transition();
+            }
+
+            i:first-of-type {
+                left: 0;
+            }
+
+            i:last-of-type {
+                right: 0;
+            }
+
+            h3 {
+                color: #834CAB;
+                font-size: calc(-1px + 1vw);
+                font-weight: 700;
+            }
+
+            p {
+                font-size: calc(-4px + 1vw);
+                font-weight: 500;
+                text-align: justify;
+                white-space: pre-wrap;
+            }
+
+            &>div:first-child {
+                width: 48.37%;
+
+                &>div {
+                    white-space: nowrap;
+                    width: 84.4%;
+
+                    &>a {
+                        width: 10.145vw;
+                        box-shadow: 0 0 5px 0.2px rgba(27, 27, 27, 0.741);
+                        @include transition();
+                    }
+                }
+            }
+
+            &>div:last-child {
+                max-width: fit-content;
+            }
+        }
+
+        &>div:last-child {
+            background-color: #834CAB;
+            background-image: url('/bg-one.png');
+            background-repeat: no-repeat;
+            background-position: bottom left;
+            background-size: 8.5% 55%;
+            bottom: -26%;
+            right: 50%;
+            margin-right: -633px;
+            z-index: 6;
+
+            &>div {
+                background-image: url('/bg-two.png');
+                background-repeat: no-repeat;
+                background-position: top right;
+                background-size: 10%;
+
+                &>div:first-child {
+                    div {
+                        width: 55%;
+                        max-width: fit-content;
+                    }
+                }
+
+                &>div:last-child {
+                    div {
+                        width: 38%;
+                        max-width: fit-content;
+                    }
+                }
+            }
+
+            h2 {
+                color: $bg-color;
+                font-size: calc(13px + 1vw);
+                font-weight: 900;
+            }
+        }
+    }
+
+    &>div:last-child {
+        i {
+            background-color: #5ADA86;
+            width: 2vw;
+            height: 2vw;
+            cursor: pointer;
+            font-size: calc(-1px + 1vw);
+            @include transition();
+
+            &:hover {
+                background-color: rgba(100, 100, 100, 0.8) !important;
+            }
+        }
+
+        h2 {
+            color: $color;
+            font-size: calc(13px + 1vw);
+            font-weight: 900;
+        }
+
+        &>div:last-child {
+            text-align: justify;
+            white-space: nowrap;
+
+            small {
+                font-weight: 400;
+                font-size: calc(-5px + 1vw);
+            }
+
+            h4 {
+                font-weight: 700;
+                font-size: calc(1px + 1vw);
+                color: $color;
+            }
+
+            p {
+                font-weight: 500;
+                font-size: calc(-3px + 1vw);
+            }
+
+            a {
+                font-weight: 700;
+                color: $bg-color;
+                font-size: calc(-5px + 1vw);
+            }
+
+            &>div {
+                width: 36.31vw;
+                @include transition();
+
+                &>div {
+                    background-repeat: no-repeat;
+                    background-position: left;
+                    background-size: 50% 100%;
+
+                    &>div {
+                        white-space: pre-wrap;
+                        width: 55%;
+                        height: 12vw;
+                    }
+                }
+            }
+
+            &>div:first-child {
+                &>div:first-child {
+                    background-image: url('/p-one.png');
+                }
+
+                &>div:last-child {
+                    background-image: url('/p-three.png');
+                }
+            }
+
+            &>div:nth-child(2) {
+                &>div:first-child {
+                    background-image: url('/p-two.png');
+                }
+
+                &>div:last-child {
+                    background-image: url('/p-four.png');
+                }
+            }
+
+            &>div:nth-child(3) {
+                &>div:first-child {
+                    background-image: url('/p-one.png');
+                }
+
+                &>div:last-child {
+                    background-image: url('/p-three.png');
+                }
+            }
+
+            &>div:nth-child(4) {
+                &>div:first-child {
+                    background-image: url('/p-two.png');
+                }
+
+                &>div:last-child {
+                    background-image: url('/p-four.png');
+                }
+            }
+        }
+    }
+}

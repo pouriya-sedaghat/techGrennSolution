@@ -1,0 +1,71 @@
+@import 'variables.scss';
+
+@mixin transition($tp: all, $td: 350ms, $ttf: linear, $tde: 0s) {
+    -webkit-transition: $tp $td $ttf $tde;
+    -moz-transition: $tp $td $ttf $tde;
+    -ms-transition: $tp $td $ttf $tde;
+    -o-transition: $tp $td $ttf $tde;
+    transition: $tp $td $ttf $tde;
+}
+
+.ad {
+    h2 {
+        font-size: calc(6px + 1vw);
+        font-weight: 900;
+        line-height: 23.5vh;
+    }
+
+    ul {
+        --bs-breadcrumb-divider: '|';
+        --bs-breadcrumb-divider-color: rgb(90, 218, 134);
+
+        li {
+            font-size: calc(-1.5px + 1vw);
+            font-weight: 500;
+            @include transition();
+            cursor: pointer;
+
+            &:hover {
+                color: $bg-color;
+            }
+        }
+    }
+
+    &>div:nth-child(2) {
+        &>div:not(:last-child>div:last-child)>div {
+            &>div {
+                width: 38%;
+            }
+        }
+
+        &>div:last-child>div:last-child {
+            width: 81%;
+        }
+    }
+
+    &>div:nth-child(3) {
+        &>div:not(:last-child)>div {
+            width: 75%;
+        }
+
+        &>div:last-child>div {
+            width: 65%;
+        }
+    }
+
+    &>div:last-child {
+        &>div {
+            &>div:first-child {
+                width: 20%;
+            }
+
+            &>div:nth-child(2) {
+                width: 24%;
+            }
+
+            &>div:last-child {
+                width: 28.7%;
+            }
+        }
+    }
+}

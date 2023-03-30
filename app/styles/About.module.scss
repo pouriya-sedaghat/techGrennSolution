@@ -1,0 +1,159 @@
+@import 'variables.scss';
+
+@mixin transition($tp: all, $td: 350ms, $ttf: linear, $tde: 0s) {
+    -webkit-transition: $tp $td $ttf $tde;
+    -moz-transition: $tp $td $ttf $tde;
+    -ms-transition: $tp $td $ttf $tde;
+    -o-transition: $tp $td $ttf $tde;
+    transition: $tp $td $ttf $tde;
+}
+
+@mixin transform($variable: scaleX(0)) {
+    -webkit-transform: $variable;
+    -moz-transform: $variable;
+    -ms-transform: $variable;
+    -o-transform: $variable;
+    transform: $variable;
+}
+
+.about {
+    font-size: calc(-1px + 1vw);
+    font-weight: 500;
+    color: #58595B;
+
+    h2,
+    button {
+        font-size: calc(6px + 1vw);
+        font-weight: 900;
+        color: $color;
+    }
+
+    h4 {
+        font-size: calc(-1px + 1vw);
+        font-weight: 700;
+        color: $color;
+    }
+
+    &>div:first-child {
+        background-image: url('/pattern-one.png');
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: 7.5% 58%;
+
+        P {
+            text-align: justify;
+        }
+    }
+
+    &>div:nth-child(2) {
+        background-image: url('/pattern-two.png');
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: 7.5% 50%;
+
+        &>div:last-child {
+            &>div {
+                width: 48.5%;
+                @include transition();
+
+                &:hover {
+                    box-shadow: 0 0 10px 1px rgba(108, 109, 111, 0.733);
+                }
+
+
+                &:hover div:first-child {
+                    outline: 4px solid #FFCB05;
+                }
+
+                &>div {
+                    p {
+                        font-size: calc(-5px + 1vw);
+                        font-size: 500;
+                        text-align: justify;
+                    }
+
+                    &:first-child {
+                        width: 5.5vw;
+                        height: 5.5vw;
+                        background-color: $bg-color;
+                        box-sizing: border-box;
+                        @include transition(all, 200ms);
+                    }
+                }
+            }
+        }
+    }
+
+    &>div:nth-child(3) {
+        &>div:last-child {
+            i {
+                background-color: rgba(109, 109, 109, 0.62);
+                width: 2vw;
+                height: 2vw;
+                cursor: pointer;
+                font-size: calc(1px + 1vw);
+                top: 50%;
+                margin-top: -1vw;
+                @include transition();
+
+                &:hover {
+                    background-color: rgba(17, 17, 17, 0.682);
+                }
+            }
+
+            i:first-of-type {
+                left: 7%;
+            }
+
+            i:last-of-type {
+                right: 7%;
+            }
+
+            &>div {
+                white-space: nowrap;
+
+                a {
+                    width: 12.9vw;
+                    box-shadow: 0 0 10px 0.2px #58595B;
+                    @include transition();
+                }
+            }
+        }
+    }
+
+    &>div:last-child {
+        &>div {
+            background-image: url('/about-last.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 19vw;
+
+            a {
+                font-size: calc(3px + 1vw);
+                font-weight: 500;
+                background-color: $bg-color;
+                right: 10%;
+                top: 54%;
+                color: $color;
+                box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.4);
+                @include transition();
+
+                &:hover {
+                    @include transform(scale(1.1));
+                }
+            }
+
+            &>div {
+                right: 28.5%;
+                top: 49.5%;
+            }
+
+            P {
+                font-size: calc(6px + 1vw);
+                font-weight: 700;
+                color: white;
+            }
+        }
+    }
+}

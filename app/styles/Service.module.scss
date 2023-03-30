@@ -1,0 +1,337 @@
+@import 'variables.scss';
+
+@mixin transition($tp: all, $td: 350ms, $ttf: linear, $tde: 0s) {
+    -webkit-transition: $tp $td $ttf $tde;
+    -moz-transition: $tp $td $ttf $tde;
+    -ms-transition: $tp $td $ttf $tde;
+    -o-transition: $tp $td $ttf $tde;
+    transition: $tp $td $ttf $tde;
+}
+
+@keyframes turn_in {
+    5% {
+        background-image: conic-gradient($bg-color calc(var(--degree) * .95), rgba(0, 0, 0, 0.107) 0deg);
+    }
+
+    10% {
+        background-image: conic-gradient($bg-color calc(var(--degree) * .9), rgba(0, 0, 0, 0.107) 0deg);
+    }
+
+    15% {
+        background-image: conic-gradient($bg-color calc(var(--degree) * .85), rgba(0, 0, 0, 0.107) 0deg);
+    }
+
+    20% {
+        background-image: conic-gradient($bg-color calc(var(--degree) * .8), rgba(0, 0, 0, 0.107) 0deg);
+    }
+
+    25% {
+        background-image: conic-gradient($bg-color calc(var(--degree) * .75), rgba(0, 0, 0, 0.107) 0deg);
+    }
+
+    30% {
+        background-image: conic-gradient($bg-color calc(var(--degree) * .7), rgba(0, 0, 0, 0.107) 0deg);
+    }
+
+    35% {
+        background-image: conic-gradient($bg-color calc(var(--degree) * .65), rgba(0, 0, 0, 0.107) 0deg);
+    }
+
+    40% {
+        background-image: conic-gradient($bg-color calc(var(--degree) * .6), rgba(0, 0, 0, 0.107) 0deg);
+    }
+
+    45% {
+        background-image: conic-gradient($bg-color calc(var(--degree) * .55), rgba(0, 0, 0, 0.107) 0deg);
+    }
+
+    50% {
+        background-image: conic-gradient($bg-color calc(var(--degree) * .5), rgba(0, 0, 0, 0.107) 0deg);
+    }
+
+    55% {
+        background-image: conic-gradient($bg-color calc(var(--degree) * .45), rgba(0, 0, 0, 0.107) 0deg);
+    }
+
+    60% {
+        background-image: conic-gradient($bg-color calc(var(--degree) * .4), rgba(0, 0, 0, 0.107) 0deg);
+    }
+
+    65% {
+        background-image: conic-gradient($bg-color calc(var(--degree) * .35), rgba(0, 0, 0, 0.107) 0deg);
+    }
+
+    70% {
+        background-image: conic-gradient($bg-color calc(var(--degree) * 0.3), rgba(0, 0, 0, 0.107) 0deg);
+    }
+
+    75% {
+        background-image: conic-gradient($bg-color calc(var(--degree) * 0.25), rgba(0, 0, 0, 0.107) 0deg);
+    }
+
+    80% {
+        background-image: conic-gradient($bg-color calc(var(--degree) * .2), rgba(0, 0, 0, 0.107) 0deg);
+    }
+
+    85% {
+        background-image: conic-gradient($bg-color calc(var(--degree) * .15), rgba(0, 0, 0, 0.107) 0deg);
+    }
+
+    90% {
+        background-image: conic-gradient($bg-color calc(var(--degree) * .1), rgba(0, 0, 0, 0.107) 0deg);
+    }
+
+    95% {
+        background-image: conic-gradient($bg-color calc(var(--degree) * .05), rgba(0, 0, 0, 0.107) 0deg);
+    }
+
+    100% {
+        background-image: conic-gradient(rgba(0, 0, 0, 0.107) 0deg);
+    }
+}
+
+@keyframes turn_in_one {
+    5% {
+        background-image: conic-gradient($color calc(var(--rate) * .95), rgba(131, 76, 171, 0.1827) 0deg);
+    }
+
+    10% {
+        background-image: conic-gradient($color calc(var(--rate) * .9), rgba(131, 76, 171, 0.1827) 0deg);
+    }
+
+    15% {
+        background-image: conic-gradient($color calc(var(--rate) * .85), rgba(131, 76, 171, 0.1827) 0deg);
+    }
+
+    20% {
+        background-image: conic-gradient($color calc(var(--rate) * .8), rgba(131, 76, 171, 0.1827) 0deg);
+    }
+
+    25% {
+        background-image: conic-gradient($color calc(var(--rate) * .75), rgba(131, 76, 171, 0.1827) 0deg);
+    }
+
+    30% {
+        background-image: conic-gradient($color calc(var(--rate) * .7), rgba(131, 76, 171, 0.1827) 0deg);
+    }
+
+    35% {
+        background-image: conic-gradient($color calc(var(--rate) * .65), rgba(131, 76, 171, 0.1827) 0deg);
+    }
+
+    40% {
+        background-image: conic-gradient($color calc(var(--rate) * .6), rgba(131, 76, 171, 0.1827) 0deg);
+    }
+
+    45% {
+        background-image: conic-gradient($color calc(var(--rate) * .55), rgba(131, 76, 171, 0.1827) 0deg);
+    }
+
+    50% {
+        background-image: conic-gradient($color calc(var(--rate) * .5), rgba(131, 76, 171, 0.1827) 0deg);
+    }
+
+    55% {
+        background-image: conic-gradient($color calc(var(--rate) * .45), rgba(131, 76, 171, 0.1827) 0deg);
+    }
+
+    60% {
+        background-image: conic-gradient($color calc(var(--rate) * .4), rgba(131, 76, 171, 0.1827) 0deg);
+    }
+
+    65% {
+        background-image: conic-gradient($color calc(var(--rate) * .35), rgba(131, 76, 171, 0.1827) 0deg);
+    }
+
+    70% {
+        background-image: conic-gradient($color calc(var(--rate) * 0.3), rgba(131, 76, 171, 0.1827) 0deg);
+    }
+
+    75% {
+        background-image: conic-gradient($color calc(var(--rate) * 0.25), rgba(131, 76, 171, 0.1827) 0deg);
+    }
+
+    80% {
+        background-image: conic-gradient($color calc(var(--rate) * .2), rgba(131, 76, 171, 0.1827) 0deg);
+    }
+
+    85% {
+        background-image: conic-gradient($color calc(var(--rate) * .15), rgba(131, 76, 171, 0.1827) 0deg);
+    }
+
+    90% {
+        background-image: conic-gradient($color calc(var(--rate) * .1), rgba(131, 76, 171, 0.1827) 0deg);
+    }
+
+    95% {
+        background-image: conic-gradient($color calc(var(--rate) * .05), rgba(131, 76, 171, 0.1827) 0deg);
+    }
+
+    100% {
+        background-image: conic-gradient(rgba(131, 76, 171, 0.1827) 0deg);
+    }
+}
+
+@mixin animation($an: turn_in, $ad: .4s, $atf: ease-out, $ade: 0s, $aic: 1, $adec: reverse, $afm: none, $aps: var(--playstate)) {
+    -webkit-animation: $an $ad $atf $ade $aic $adec $afm $aps;
+    -moz-animation: $an $ad $atf $ade $aic $adec $afm $aps;
+    -ms-animation: $an $ad $atf $ade $aic $adec $afm $aps;
+    -o-animation: $an $ad $atf $ade $aic $adec $afm $aps;
+    animation: $an $ad $atf $ade $aic $adec $afm $aps;
+}
+
+.service {
+    h2 {
+        font-size: calc(6px + 1vw);
+        font-weight: 900;
+        color: $color;
+    }
+
+    p,
+    a {
+        font-size: calc(-3px + 1vw);
+    }
+
+    p {
+        font-weight: 400;
+        text-align: justify;
+    }
+
+    &>div:first-child {
+        i {
+            opacity: 0;
+            width: 2vw;
+            height: 2vw;
+            top: 50%;
+            margin-top: -1vw;
+            cursor: pointer;
+            font-size: calc(-1px + 1vw);
+            @include transition();
+        }
+
+        &:hover i {
+            opacity: 1;
+            background-color: rgb(55, 52, 52);
+        }
+
+        i:first-of-type {
+            left: 3%;
+        }
+
+        i:last-of-type {
+            right: 3%;
+        }
+
+        &>div {
+            white-space: nowrap;
+
+            a {
+                width: 74vw;
+                @include transition();
+            }
+
+            div {
+                width: 8vw;
+                bottom: 17%;
+                left: 50%;
+                margin-left: -4vw;
+
+                span {
+                    width: 0.4vw;
+                    height: 0.4vw;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    &>div:nth-child(2) {
+        a {
+            font-weight: 500;
+            background-color: $bg-color;
+        }
+
+        &>div {
+            &>div:first-child {
+                &>div {
+                    width: 7.5vw;
+                    height: 6.5vw;
+                    bottom: -20%;
+                    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.107);
+
+                    &>div:first-child {
+                        width: 4vw;
+                        height: 4vw;
+                        background-color: rgba(131, 76, 171, 0.51);
+                        background-image: conic-gradient($color var(--rate), rgba(131, 76, 171, 0.182) 0deg);
+                        @include animation(turn_in_one, .4s, ease-out, 0s, 1, reverse, none, running);
+
+                        &>div {
+                            width: 3.5vw;
+                            height: 3.5vw;
+                            background-color: white;
+
+                            p {
+                                font-weight: 700;
+                                color: $color;
+                            }
+                        }
+                    }
+
+                    &>div:last-child {
+                        p {
+                            font-size: calc(-6px + 1vw);
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+
+        &>div:not(:nth-child(2), :nth-child(4), :nth-child(6)) {
+            &>div:first-child {
+                &>div {
+                    left: 1.5%;
+                }
+            }
+        }
+
+        &>div:not(:nth-child(1), :nth-child(3), :nth-child(5)) {
+            &>div:first-child {
+                &>div {
+                    right: 1.5%;
+                }
+            }
+        }
+    }
+
+    &>div:last-child {
+        p {
+            font-size: calc(-3px + 1vw);
+            font-weight: 700;
+        }
+
+        &>div {
+            background-color: #834CAB;
+
+            &>div {
+                width: 8vw;
+                height: 12vw;
+
+                &>div:first-child {
+                    width: 6vw;
+                    height: 6vw;
+                    background-color: rgba(0, 0, 0, 0.107);
+                    background-image: conic-gradient($bg-color var(--degree), rgba(0, 0, 0, 0.107) 0deg);
+                    @include animation();
+
+                    &>div {
+                        width: 5vw;
+                        height: 5vw;
+                        background-color: #834CAB;
+                    }
+                }
+            }
+        }
+    }
+}

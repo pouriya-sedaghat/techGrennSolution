@@ -1,0 +1,157 @@
+@import 'variables.scss';
+
+@mixin transition($tp: all, $td: 350ms, $ttf: linear, $tde: 0s) {
+    -webkit-transition: $tp $td $ttf $tde;
+    -moz-transition: $tp $td $ttf $tde;
+    -ms-transition: $tp $td $ttf $tde;
+    -o-transition: $tp $td $ttf $tde;
+    transition: $tp $td $ttf $tde;
+}
+
+.digital {
+
+    span,
+    h2,
+    h3 {
+        color: $color;
+    }
+
+    span {
+        font-size: calc(-1px + 1vw);
+        font-weight: 500;
+    }
+
+    h2 {
+        font-size: calc(6px + 1vw);
+        font-weight: 900;
+    }
+
+    h3 {
+        font-size: calc(3px + 1vw);
+        font-weight: 700;
+    }
+
+    p {
+        font-size: calc(-3px + 1vw);
+        font-weight: 400;
+        text-align: justify;
+    }
+
+    &>div:nth-child(2) {
+        &>div:first-child>div {
+            width: 10vw;
+            bottom: -13.5%;
+            left: 6.5%;
+        }
+    }
+
+    &>div:nth-child(4) {
+        &>div:first-child>div {
+            width: 10vw;
+            bottom: -1%;
+            left: -3%;
+        }
+    }
+
+    &>div:nth-child(5) {
+        h2 {
+            font-weight: 500;
+        }
+
+        h3 {
+            color: $bg-color;
+            font-weight: 900;
+        }
+
+        &>div:last-child {
+            background-color: $color;
+
+            &>div>div:first-child {
+                width: 5vw;
+                height: 5vw;
+            }
+        }
+    }
+
+    &>div:nth-child(6) {
+        &>div:first-child {
+            &>div:first-of-type {
+                width: 14.5vw;
+                top: 15%;
+                right: 0;
+            }
+
+            &>div:last-of-type {
+                width: 13vw;
+                bottom: -20%;
+                right: 3.8%;
+            }
+        }
+    }
+
+    &>div:nth-child(7) {
+        &>div:first-child {
+            &>div:first-of-type {
+                width: 7vw;
+                top: -3%;
+                right: 7%;
+
+                &::after {
+                    content: 'Share';
+                    position: absolute;
+                    top: 50%;
+                    margin-top: -1vw;
+                    left: 50%;
+                    margin-left: -2.1vw;
+                    font-size: calc(6px + 1vw);
+                    font-weight: 900;
+                    color: white;
+                }
+            }
+
+            &>div:nth-of-type(2) {
+                width: 4.5vw;
+                bottom: 25%;
+                left: 2.5%;
+
+                &::after {
+                    content: 'Link';
+                    position: absolute;
+                    top: 50%;
+                    margin-top: -0.7vw;
+                    left: 50%;
+                    margin-left: -1.1vw;
+                    font-size: calc(-1px + 1vw);
+                    font-weight: 900;
+                    color: white;
+                }
+            }
+
+            &>div:last-of-type {
+                width: 7vw;
+                bottom: 6%;
+                left: 0%;
+
+                &::after {
+                    content: 'Tweet';
+                    position: absolute;
+                    top: 50%;
+                    margin-top: -1vw;
+                    left: 50%;
+                    margin-left: -2.1vw;
+                    font-size: calc(3px + 1vw);
+                    font-weight: 900;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    &>div:last-child {
+        &>div:first-child>div:first-of-type {
+            width: 13vw;
+            bottom: -8%;
+            right: -21%;
+        }
+    }
+}

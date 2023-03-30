@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+@mixin transition($tp: all, $td: 350ms, $ttf: linear, $tde: 0s) {
+  -webkit-transition: $tp $td $ttf $tde;
+  -moz-transition: $tp $td $ttf $tde;
+  -ms-transition: $tp $td $ttf $tde;
+  -o-transition: $tp $td $ttf $tde;
+  transition: $tp $td $ttf $tde;
+}
+
+@mixin transform($variable: scaleX(0)) {
+  -webkit-transform: $variable;
+  -moz-transform: $variable;
+  -ms-transform: $variable;
+  -o-transform: $variable;
+  transform: $variable;
+}
+
+@mixin scrollbar($w: 10px, $bg: #eee, $br: 10px, $tbg: #844dbb, $tbr: 10px, $hbg: #7540aa) {
+  ::-webkit-scrollbar {
+    width: $w;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: $bg;
+    border-radius: $br;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: $tbg;
+    border-radius: $tbr;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: $hbg;
+  }
+}
+
+@include scrollbar();
+
+body {
+  background-color: #FFF;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+
+  .header {
+    box-shadow: 0 0.5px 10px rgba(193, 191, 191, 0.614);
+
+    & ul {
+      list-style-type: none;
+
+      li {
+        a {
+          line-height: 60px;
+          font-weight: 600;
+          position: relative;
+          @include transition();
+
+          &:hover {
+            color: #834CAB !important;
+
+            &::after {
+              @include transform(scaleX(1));
+            }
+          }
+
+          &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 5px;
+            background-color: #5ADA86;
+            left: 0;
+            bottom: 0;
+            border-radius: 1.5px;
+            @include transition(all, 450ms, ease, 0s);
+            @include transform();
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    background-color: #513370;
+
+    .social-network>a {
+      width: 32px;
+      height: 32px;
+      display: block;
+      @include transition(all, 200ms);
+
+      &:hover {
+        background-color: #FFCB05 !important;
+        border-radius: 50%;
+        box-shadow: 0 0 5px 0.5px rgba(200, 200, 200, 0.7);
+        @include transform(scale(1.1));
+      }
+
+      &:first-of-type {
+        background: url('/social-network.png') 0px 0px;
+        background-size: cover;
+      }
+
+      &:nth-of-type(2) {
+        background: url('/social-network.png') -45.5px 0px;
+        background-size: cover;
+      }
+
+      &:nth-of-type(3) {
+        background: url('/social-network.png') -91.5px 0px;
+        background-size: cover;
+      }
+
+      &:last-of-type {
+        background: url('/social-network.png') -137px 0px;
+        background-size: cover;
+      }
+    }
+
+    .content-footer {
+      &>div:first-child {
+        width: 13%;
+      }
+
+      div:nth-of-type(2) {
+        ul {
+          list-style-type: none;
+
+          a {
+            @include transition(all, 350ms);
+            line-height: 20px;
+
+            &:hover {
+              color: #5ADA86 !important;
+            }
+          }
+        }
+      }
+
+      &>div:last-of-type {
+        width: 35%;
+      }
+
+      form {
+        p {
+          color: #5ADA86 !important;
+          font-weight: 800;
+        }
+
+        input,
+        textarea {
+          outline: 0;
+          font-size: 14px;
+          resize: none;
+          caret-color: #aaa;
+        }
+
+        button {
+          bottom: 10px;
+          font-size: 13px;
+          right: 5px;
+          background-color: #5ADA86 !important;
+        }
+      }
+
+      position: relative;
+
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        width: 71%;
+        height: 1px;
+        background-color: #5ADA86;
+      }
+    }
+
+    .content-footer~div {
+      a {
+        right: 11.7vw;
+        bottom: -0.85vw;
+        color: #513370;
+        width: 2.5vw;
+        height: 2.5vw;
+        font-size: calc(0px + 1vw);
+        font-weight: bold;
+        @include transition();
+
+        &:hover {
+          background-color: rgb(213, 160, 0) !important;
+        }
+      }
+    }
+
+    &>div:last-of-type {
+      background-color: #5ADA86;
+      color: #513370;
+    }
+  }
+}
+
+
+.current-page {
+  &::after {
+    background-color: #5ADA86 !important;
+    @include transform(scaleX(1) !important);
+  }
+}
+
+@media all and (min-width:1400px) {
+  body {
+    .header ul a {
+      font-size: calc(0.64px + 1vw);
+    }
+  }
+}

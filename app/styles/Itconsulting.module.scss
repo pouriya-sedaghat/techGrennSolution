@@ -1,0 +1,128 @@
+@import 'variables.scss';
+
+@mixin transition($tp: all, $td: 350ms, $ttf: linear, $tde: 0s) {
+    -webkit-transition: $tp $td $ttf $tde;
+    -moz-transition: $tp $td $ttf $tde;
+    -ms-transition: $tp $td $ttf $tde;
+    -o-transition: $tp $td $ttf $tde;
+    transition: $tp $td $ttf $tde;
+}
+
+.consulting {
+
+    h2,
+    h3 {
+        color: $color;
+    }
+
+    h2 {
+        font-size: calc(6px + 1vw);
+        font-weight: 900;
+    }
+
+    h3,
+    li {
+        font-size: calc(-1px + 1vw);
+    }
+
+    h3 {
+        font-weight: 700;
+    }
+
+    ul {
+        list-style-type: disc;
+        list-style-position: inside;
+
+        li {
+            font-weight: 600;
+
+            &::marker {
+                color: $bg-color;
+            }
+        }
+    }
+
+    p {
+        font-size: calc(-3px + 1vw);
+        font-weight: 400;
+        text-align: justify;
+    }
+
+    button {
+        background-color: $bg-color;
+
+        &:hover {
+            background-color: #ffc107;
+        }
+    }
+
+    &>div:first-child {
+        background-image: url('/pattern-one.png');
+        background-repeat: no-repeat;
+        background-size: 5% 55%;
+        background-position: top right;
+        background-origin: content-box;
+
+        &>div:first-child {
+            &>div {
+                border-radius: 13.5%;
+            }
+        }
+    }
+
+    &>div:nth-child(2) {
+        p {
+            color: $color;
+        }
+
+        &>div:last-child {
+
+            p,
+            button {
+                font-size: calc(-5px + 1vw);
+                font-weight: 500;
+            }
+
+            &>div {
+                width: 24vw;
+                box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.25);
+                @include transition();
+
+                &:hover {
+                    background-color: $color !important;
+
+                    p,
+                    h3 {
+                        color: white;
+                    }
+                }
+
+                &>div:first-child {
+                    width: 20%;
+                }
+            }
+        }
+    }
+
+    &>div:nth-child(3) {
+        background-image: url('/pattern-two.png');
+        background-repeat: no-repeat;
+        background-size: 5.5% 35%;
+        background-position: bottom left;
+
+        &>div:last-child>div {
+            width: 7vw;
+            bottom: 5%;
+            left: -5%;
+        }
+    }
+
+    &>div:last-child {
+        padding: 0 0 50px !important;
+        &>div:last-child>div {
+            width: 7vw;
+            bottom: -1%;
+            right: 9%;
+        }
+    }
+}

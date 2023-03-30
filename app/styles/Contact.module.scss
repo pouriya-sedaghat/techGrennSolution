@@ -1,0 +1,77 @@
+@import 'variables.scss';
+
+.contact {
+    background-image: url('/pattern-four.png');
+    background-repeat: no-repeat;
+    background-position: 35% 132%;
+    background-size: 15% 30%;
+    background-color: #F2F2F2;
+
+    h2 {
+        font-size: calc(6px + 1vw);
+        font-weight: 900;
+        color: $color;
+    }
+
+    label {
+        font-size: calc(-2px + 1vw);
+        font-weight: 700;
+    }
+
+    li {
+        font-size: calc(1px + 1vw);
+        font-weight: 700;
+    }
+
+    input,
+    textarea {
+        font-size: calc(-5px + 1vw);
+        font-weight: 400;
+        resize: none;
+        box-shadow: 0 0 2.5px 0.2px #58595B;
+        outline: 0;
+        caret-color: #505050;
+        color: #6c757d;
+        width: 28vw;
+
+        &:focus {
+            box-shadow: 0 0 2.5px 0.2px blue;
+        }
+    }
+
+    textarea {
+        height: 6.495vw;
+    }
+
+    iframe {
+        width: 30vw;
+        height: 16vw;
+    }
+
+    button {
+        font-size: calc(-5px + 1vw);
+        font-weight: 700;
+        background-color: $bg-color;
+    }
+
+    ul {
+        list-style-position: inside;
+
+        &>li:first-child {
+            list-style-image: url('/one-item.png');
+        }
+
+        &>li:nth-child(2) {
+            list-style-image: url('/two-item.png');
+        }
+
+        &>li:last-child {
+            list-style-image: url('/three-item.png');
+        }
+    }
+
+    &>div>div:nth-child(2)>div {
+        width: 65%;
+        box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.7);
+    }
+}
