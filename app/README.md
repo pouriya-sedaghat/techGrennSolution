@@ -1,6 +1,14 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app@13.0.0`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app@13.0.0).
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app@13.0.0`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) .
 
 ## Getting Started
+
+### packages:
+
+```bash
+npm install sass
+npm install bootstrap
+npm install reactstrap
+```
 
 First, run the development server:
 
