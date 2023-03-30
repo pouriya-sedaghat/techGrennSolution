@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-#### First, install this packages :
+#### *First, install this packages :
 
 ```bash
 npm install sass
@@ -10,7 +10,7 @@ npm install bootstrap
 npm install reactstrap
 ```
 
-#### then, run the development server :
+#### *then, run the development server :
 
 ```bash
 npm run dev
