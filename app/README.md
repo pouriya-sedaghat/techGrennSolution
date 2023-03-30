@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-*First, install this packages :
+*First, install the packages :
 
 ```bash
 npm install sass
